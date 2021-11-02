@@ -17,5 +17,15 @@ console.log(difficulty);
 // dopo che l'utente ha deciso la difficoltà facciamo creare al computer la tabella con i quadrati per la difficoltà eseguita
 
 if (difficulty == "Facile") {
-    
+    for (let i = 0; i < 100; i++) {
+        contBox.innerHTML += `<div class="square"></div>`   
+    }
+}else if (difficulty == "Media") {
+    for (let i = 0; i < 81; i++) {
+        contBox.innerHTML += `<div class="square"></div>`   
+    }
+}else {
+    for (let i = 0; i < 49; i++) {
+        contBox.innerHTML += `<div class="square"></div>`   
+    }
 }
