@@ -11,21 +11,57 @@ console.log(contBox);
 
 // Chiediamo all'utente a quale difficoltà vorrà giocare
 
-let difficulty = prompt("Decidi la difficoltà(Facile - Media - Difficile)")
+let difficulty = prompt("Decidi la difficoltà ( Facile - Media - Difficile )")
 console.log(difficulty);
 
 // dopo che l'utente ha deciso la difficoltà facciamo creare al computer la tabella con i quadrati per la difficoltà eseguita
 
 if (difficulty == "Facile") {
     for (let i = 0; i < 100; i++) {
-        contBox.innerHTML += `<div class="square"></div>`   
+        const element = document.createElement('div');
+        // Mettiamo che al click li venga data una classe active per il cambio di colore
+        element.addEventListener("click",
+            function clickActive() {
+                element.classList.add("active")
+            }
+        );
+        element.classList.add('square');
+        contBox.appendChild(element);
     }
 }else if (difficulty == "Media") {
     for (let i = 0; i < 81; i++) {
-        contBox.innerHTML += `<div class="square"></div>`   
+        const element = document.createElement('div');
+        // Mettiamo che al click li venga data una classe active per il cambio di colore
+        element.addEventListener("click",
+            function clickActive() {
+                element.classList.add("active")
+            }
+        );
+        element.classList.add('square');
+        contBox.appendChild(element);   
     }
 }else {
     for (let i = 0; i < 49; i++) {
-        contBox.innerHTML += `<div class="square"></div>`   
+        const element = document.createElement('div');
+        // Mettiamo che al click li venga data una classe active per il cambio di colore
+        element.addEventListener("click",
+            function clickActive() {
+                element.classList.add("active")
+            }
+        );
+        element.classList.add('square');
+        contBox.appendChild(element);
     }
 }
+
+
+
+
+
+/*
+function somma(a, b) {
+    return a+b;
+}
+
+const risultato = somma(2, 4); // 6
+*/
